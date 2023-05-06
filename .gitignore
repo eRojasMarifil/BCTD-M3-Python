@@ -7,3 +7,6 @@
 # ignora los docs
 *.pdf
 *.txt
+
+#workspaces
+*.code-workspace
