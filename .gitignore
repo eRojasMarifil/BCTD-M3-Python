@@ -1,5 +1,8 @@
 #IGNORA los materiales
-MATERIAL
+\MATERIAL
 
 # ignora los rar
-*-EvelynRojas.rar
+*.rar
+
+# ignora los docs
+*.pdf
