@@ -1,5 +1,5 @@
 #IGNORA los materiales
-\MATERIAL
+/MATERIAL/
 
 # ignora los rar
 *.rar

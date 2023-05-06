@@ -5,7 +5,7 @@ INSTRUCCIONES
 Lee con atención cada uno de los requerimientos que se presentan a continuación, y desarrolla la prueba de acuerdo con lo solicitado.
 DESCRIPCIÓN
 Dada Ia siguiente lista de nombres:
-    Harry Houdini
+    H                              
     Newton
     David Blaine
     Hawking
@@ -29,11 +29,37 @@ dNombres = {'Harry Houdini':'Mago',
            'Juanes':'Otro'}
 
 def hacer_grandioso(dNombres):
+    magos={}
     for nombre, categoria, in dNombres.items():
         if categoria =='Mago':
-            dNombres[nombre] = 'El gran' + nombre
-    return hacer_grandioso
+            magos['El gran ' + nombre] = categoria
+    return magos
 
+def divisor():
+    for i in range(20):
+        print('_',end='')
+    print(' ')
+       
+        
+def imprimir_nombres(diccionario):
+    for nombre, categoria, in diccionario.items():
+        print (nombre)
+        
+def selector_x_categoria(categoriaPedida, diccionario): 
+    categorizados={}
+    print (f'Nombres que son {categoriaPedida}s:')
+    if True:
+        for nombre, categoria, in diccionario.items():
+            if categoria==categoriaPedida:
+                categorizados[nombre]=categoriaPedida
+        return categorizados
+    
 print('Lista completa de nombres:')
-for nombre, categoria, in dNombres.items():
-    print (nombre)
+imprimir_nombres(dNombres)
+divisor()
+print('Nombres que son Magos:')
+imprimir_nombres(hacer_grandioso(dNombres))
+divisor()
+imprimir_nombres(selector_x_categoria('Científico',dNombres))
+divisor()
+imprimir_nombres(selector_x_categoria('Otro',dNombres))
